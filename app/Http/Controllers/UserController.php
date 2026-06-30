@@ -25,8 +25,10 @@ class UserController extends Controller
         return '<h1>' . $a + $b . '</h1>';
     }
 
-    function getName($name)
+    function gets()
     {
-        return 'hello ' . $name;
+        $name = "vishal";
+        $users = [ "aman","Vikas","rahul"];
+        return view('home',['name'=>$name,'users'=>$users]);
     }
 }
