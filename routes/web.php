@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ViewController;
-use GrahamCampbell\ResultType\Success;
+// use GrahamCampbell\ResultType\Success;
 
 Route::get('/', function () {
     return view('welcome');
@@ -33,4 +33,8 @@ Route::get('get',[UserController::class,'gets']);
 // Route::get('/access/{name}',[UserController::class,'getName']);
 
 Route::get('welcome',[ViewController::class,'welcome']);
+
+Route::get('/test',function(){
+    return view('test');
+});
 
